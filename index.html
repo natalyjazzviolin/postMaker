@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Affiliate Post Creator For WordPress</title>
+</head>
+<body >
+    <main>
+        <div id="addItem" class="header">
+            <h1>Affiliate Post Maker</h1>
+
+            <form id="itemForm" autocomplete=“off”>
+                <input autofocus type="text" id="itemName" class="inputs" placeholder="Item Name">
+                <input type="text" id="itemPrice" class="inputs" placeholder="Item Price">
+                <input type="text" id="itemLink" class="inputs" placeholder="Item Affiliate Link">
+                <input type="text" id="itemDescription" class="inputs" placeholder="Item Description">
+                <input type="text" id="imageUrl" class="inputs" placeholder="Image URL"> 
+                <input type="submit">
+            </form>
+        </div>
+            <code>
+                <pre id="codeBlock" contenteditable="true">
+                    <p id="h2"></p>
+                    <div class="wordwrap">
+                        <ul id="itemList"></ul>
+                    </div>
+                </pre>
+            </code>
+            <div>
+              <img id='source' src=''>  
+            </div>
+            <iframe src="https://www.photopea.com/" title="Photopea" id="photoPea" ></iframe>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
+
+<!-- <label>No.</label>
+<input type="number" value="1" id="itemNumber" readonly><br> -->
