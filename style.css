@@ -113,3 +113,13 @@ iframe {
 
 #itemForm {
 }
+
+.tutorial {
+  display: grid;
+  justify-items: center;
+}
+
+a {
+  color: black;
+  font-size: 2rem;
+}
