@@ -1,0 +1,22 @@
+{
+  "name": "postmaker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/natalyjazzviolin/postMaker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/natalyjazzviolin/postMaker/issues"
+  },
+  "homepage": "https://github.com/natalyjazzviolin/postMaker#readme",
+  "devDependencies": {},
+  "dependencies": {}
+}

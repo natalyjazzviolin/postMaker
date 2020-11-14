@@ -60,17 +60,16 @@ form.addEventListener('submit', event => {
     var itemLink = document.getElementById("itemLink").value;
     var itemPrice = document.getElementById("itemPrice").value;
     var itemDescription = document.getElementById("itemDescription").value;
-    var imageURL = document.getElementById("imageUrl").value;
     var image = document.getElementById("source");
     var photoPea = document.getElementById("photoPea");
 
-    let titleBlock = `&lt;h3&gt; &lt;a href="${itemLink}"&gt;${itemName}&lt;/a&gt;, $${itemPrice}&lt;/h3&gt;<br><br>${itemDescription}`;
+    let titleBlock = `&lt;h3&gt; &lt;a href="${itemLink}" target="_blank" rel="noopener" &gt;<mark>${itemName}</mark>&lt;/a&gt;, $${itemPrice}&lt;/h3&gt;<br><br>${itemDescription}`;
     let text = titleBlock;
 
     if (itemName !== '' && itemLink !== '' && itemDescription !== '' && itemPrice !== '') {
         addItem(text);
         
-        image.src = imageURL;
+    
         
 
 
@@ -79,39 +78,31 @@ form.addEventListener('submit', event => {
         document.getElementById("itemLink").value = '';
         document.getElementById("itemPrice").value = '';
         document.getElementById("itemDescription").value = '';
-        document.getElementById("imageUrl").value = '';
         document.getElementById("itemName").focus();
     }
     
 });
 
+var mybtn = document.getElementsByClassName("tablinks")[0];
+mybtn.click();
 
-// object.files[0] = imageURL;
-// let newURL = encodeURI(JSON.stringify(object))
-
-// photoPea.src = `https://www.photopea.com#${newURL}`
-
-// console.log(encodeURI(JSON.stringify(object)));
-
-
-
-// function newItem() {
-//     var li = document.createElement("li");
-//     var itemName = document.getElementById("itemName").value;
-//     var itemLink = document.getElementById("itemLink").value;
-//     var itemPrice = document.getElementById("itemPrice").value;
-//     let titleBlock = `&lt;h3&gt; &lt;a href="${itemLink}"&gt;${itemName}&lt;/a&gt;, $f${itemPrice}&lt;/h3&gt;`;
-//     let t = document.createTextNode(titleBlock)
-
-//     li.appendChild(t);
-
-//     if (itemName === '' && itemLink === '' && itemPrice === '') {
-//         console.log('Fill out all fields')
-//     } else {
-//         document.getElementById("itemList").appendChild(li);
-//     }
-
-    
-//     document.getElementById("itemName").value = "";
-
-// }
+function openTab(evt, tabName) {
+    // Declare all variables
+    var i, tabcontent, tablinks;
+  
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+  
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+  
+    // Show the current tab, and add an "active" class to the button that opened the tab
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
